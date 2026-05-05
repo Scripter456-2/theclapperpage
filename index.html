@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TERMINAL_ACCESS_GRANTED</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #00ff41; /* Classic Matrix Green */
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        #terminal {
+            width: 80%;
+            max-width: 800px;
+            border: 1px solid #00ff41;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        .glitch {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border: 1px solid #555;
+            filter: grayscale(100%) contrast(120%);
+            transition: 0.3s;
+        }
+
+        .gallery img:hover {
+            filter: grayscale(0%) contrast(100%);
+            transform: scale(1.05);
+            border-color: #00ff41;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        button {
+            background: transparent;
+            color: #00ff41;
+            border: 1px solid #00ff41;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: inherit;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background: #00ff41;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="terminal">
+        <div class="glitch">> ACCESSING CLASSIFIED_FILES...</div>
+        <p>> STATUS: UNREDACTED</p>
+        
+        <!-- Audio trigger -->
+        <button onclick="playClap()">INITIALIZE AUDIO UPLINK</button>
+        <audio id="clapSound" src="clap.mp3"></audio>
+
+        <div class="gallery">
+            <!-- Ensure these filenames match what you upload to GitHub -->
+            <img src="epstein.jpg" alt="Evidence 01">
+            <img src="diddy_oil.jpg" alt="Evidence 02">
+            <img src="sus_meme.jpg" alt="Evidence 03">
+            <img src="redacted.jpg" alt="Evidence 04">
+        </div>
+
+        <p style="margin-top: 20px;">> [SYSTEM]: DATA LEAK IN PROGRESS...</p>
+    </div>
+
+    <script>
+        function playClap() {
+            const audio = document.getElementById('clapSound');
+            audio.play();
+            console.log("Clap sound triggered.");
+        }
+    </script>
+</body>
+</html>
